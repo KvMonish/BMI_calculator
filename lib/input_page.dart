@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const activecardcolor = Color(0XFF0A0E21);
+
 class InputPage extends StatefulWidget {
   @override
   State<InputPage> createState() => _InputPageState();
@@ -11,7 +13,7 @@ class _InputPageState extends State<InputPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI Calculator'),
-        backgroundColor: Color(0XFF0A0E21),
+        backgroundColor: activecardcolor,
       ),
       body: Column(
         children: [
@@ -19,38 +21,44 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: Reusablecard(colour: Color(0xFF1D1E33) ,),
+                  child: Reusablecard(colour: activecardcolor,),
                 ),
                 Expanded(
-                  child: Reusablecard(colour: Color(0xFF1D1E33) ,),
+                  child: Reusablecard(colour: activecardcolor,),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: Reusablecard(colour: Color(0xFF1D1E33) ,),
+            child: Reusablecard(colour:activecardcolor,),
           ),
           Expanded(
             child: Row(
               children: [
                 Expanded(
-                  child: Reusablecard(colour: Color(0xFF1D1E33) ,),
+                  child: Reusablecard(colour: activecardcolor,),
                 ),
                 Expanded(
-                  child: Reusablecard(colour: Color(0xFF1D1E33) ,),
+                  child: Reusablecard(colour: activecardcolor,),
                 ),
               ],
             ),
           ),
+          Container(
+            color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: 80.0,
+          )
         ],
+
       ),
     );
   }
 }
 
 class Reusablecard extends StatelessWidget {
-
-  Reusablecard({required this.colour})
+  Reusablecard({required this.colour});
 
   final Color colour;
 
